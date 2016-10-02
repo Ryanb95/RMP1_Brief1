@@ -12,7 +12,7 @@ void setup() {
   for(int i = 0; i < circles; i++){
     x[i] = int(random(width));
     y[i] = int(random(height));
-    size[i] = int(random(20, 150));
+    size[i] = int(random(10, 50));
     colours[i] = color(random(255), random(255), random(255));
   }
 }
