@@ -1,5 +1,6 @@
 int circles = 20;
 
+int[] size = new int[circles];
 int[] x = new int[circles];
 int[] y = new int[circles];
 
@@ -10,6 +11,7 @@ void setup() {
   for(int i = 0; i < circles; i++){
     x[i] = int(random(width));
     y[i] = int(random(height));
+    size[i] = int(random(20, 200));
   }
 }
 
@@ -18,6 +20,6 @@ void draw() {
   
   for(int i = 0; i < circles; i++){
     fill(random(255), random(255), random(255));
-    ellipse(x[i], y[i], 50, 50);
+    ellipse(x[i], y[i], size[i], size[i]);
   }
 }
