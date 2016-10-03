@@ -1,4 +1,4 @@
-int circles = 20;
+int moveCirc = 10;
 
 
 float[][] myCircles = new float[20][];
@@ -15,7 +15,6 @@ void setup() {
     randomCircles[2] = random(10, 50);
     
     myCircles[r] = randomCircles;
-
   } 
 }
 
@@ -24,6 +23,5 @@ void draw() {
   
   for(int i = 0; i < myCircles.length; i++){
     ellipse(myCircles[i][0], myCircles[i][1], myCircles[i][2], myCircles[i][2]);
-      
     }
   }
