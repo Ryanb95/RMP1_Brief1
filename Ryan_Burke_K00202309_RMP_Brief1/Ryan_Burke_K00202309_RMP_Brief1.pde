@@ -1,9 +1,9 @@
 int moveCirc = 10;
 
-
 float[][] myCircles = new float[20][];
 
 void setup() {
+  
   size(800,800);
   background(123);
   
@@ -23,5 +23,21 @@ void draw() {
   
   for(int i = 0; i < myCircles.length; i++){
     ellipse(myCircles[i][0], myCircles[i][1], myCircles[i][2], myCircles[i][2]);
+    
+      if(keyCode == LEFT && keyPressed == true){
+        myCircles[i][0] -= moveCirc;
+      }
+      
+      if(keyCode == RIGHT && keyPressed == true){
+        myCircles[i][0] += moveCirc;
+      }
+      
+      if(keyCode == UP && keyPressed == true){
+        myCircles[i][1] -= moveCirc;
+      }
+      
+      if(keyCode == DOWN && keyPressed == true){
+        myCircles[i][1] += moveCirc;
+      }
     }
   }
