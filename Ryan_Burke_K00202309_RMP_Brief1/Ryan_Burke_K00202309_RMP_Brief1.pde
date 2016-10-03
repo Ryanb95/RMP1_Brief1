@@ -1,27 +1,29 @@
 int circles = 20;
 
-int[] size = new int[circles];
-int[] x = new int[circles];
-int[] y = new int[circles];
-color[] colours = new color[circles];
+
+float[][] myCircles = new float[20][];
 
 void setup() {
   size(800,800);
   background(123);
   
-  for(int i = 0; i < circles; i++){
-    x[i] = int(random(width));
-    y[i] = int(random(height));
-    size[i] = int(random(10, 50));
-    colours[i] = color(random(255), random(255), random(255));
-  }
+  for(int r = 0; r < myCircles.length; r++){
+    float[] randomCircles = new float[3];
+    
+    randomCircles[0] = random(width);
+    randomCircles[1] = random(height);
+    randomCircles[2] = random(10, 50);
+    
+    myCircles[r] = randomCircles;
+
+  } 
 }
 
 void draw() {
   background(123);
   
-  for(int i = 0; i < circles; i++){
-    fill(colours[i]);
-    ellipse(x[i], y[i], size[i], size[i]);
+  for(int i = 0; i < myCircles.length; i++){
+    ellipse(myCircles[i][0], myCircles[i][1], myCircles[i][2], myCircles[i][2]);
+      
+    }
   }
-}
