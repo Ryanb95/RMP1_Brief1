@@ -1,3 +1,5 @@
+Face myFace;
+
 int moveCirc = 10;
 
 float[][] myCircles = new float[20][];
@@ -7,6 +9,8 @@ void setup() {
   
   size(800,800);
   background(123);
+  
+  myFace = new Face();
   
   for(int r = 0; r < myCircles.length; r++){
     float[] randomCircles = new float[3];
@@ -22,6 +26,8 @@ void setup() {
 
 void draw() {
   background(123);
+  
+  myFace.paint(width/2, height/2);
   
   for(int i = 0; i < myCircles.length; i++){
     fill(colours[i]);
