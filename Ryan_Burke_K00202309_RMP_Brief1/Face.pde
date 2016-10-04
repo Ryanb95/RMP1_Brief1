@@ -21,6 +21,12 @@ class Face{
     ellipse(25, 20, 5, 5);
     ellipse(75, 20, 5, 5);
     
+    fill(255, 255, 180);
+    triangle(50, 35, 30, 85, 70, 85);
+    
+    fill(0);
+    ellipse(50, 120, 35, 35);
+    
     popMatrix();
   }
 }
