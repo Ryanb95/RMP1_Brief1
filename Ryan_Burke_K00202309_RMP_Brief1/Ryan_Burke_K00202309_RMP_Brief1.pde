@@ -27,7 +27,7 @@ void setup() {
 void draw() {
   background(123);
   
-  myFace.paint(width/2, height/2);
+  myFace.paint(mouseX, mouseY);
   
   for(int i = 0; i < myCircles.length; i++){
     fill(colours[i]);
