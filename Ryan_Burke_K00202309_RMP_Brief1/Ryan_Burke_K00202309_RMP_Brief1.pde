@@ -5,6 +5,11 @@ int moveCirc = 10;
 float red = random(255);
 float green = random(255);
 float blue = random(255);
+float pongX = 400;
+float pongY = 400;
+float pongSize = 50;
+float movePongX = .5;
+float movePongY = .5;
 
 //Arrays to store circle info.
 float[][] myCircles = new float[20][];
@@ -66,6 +71,36 @@ void draw() {
 //changes background colour via mouse movement
     green = mouseX;
     blue = mouseY;
+
+    ellipse(pongX, pongY, pongSize, pongSize);
+    
+    if(pongX > 800){
+      movePongX = -movePongX;
+    }
+    if(pongX < 0){
+      movePongX = -movePongX;
+    }
+    if(pongY > 800){
+      movePongY = -movePongY;
+    }
+    if(pongY < 0){
+      movePongY = -movePongY;
+    }
+    
+    pongX = pongX + movePongX; 
+    pongY = pongY + movePongY;
+    
+    if(mousePressed && movePongX == -.5) {
+
+    movePongX *= -1;
+
+    }
+
+    if(mousePressed && pongX == mouseX) {
+
+      movePongY = movePongY * -1;
+
+    }
 
   }
 }
