@@ -2,6 +2,9 @@ Face myFace;
 
 //Variable for increment circles will move
 int moveCirc = 10;
+float red = random(255);
+float green = random(255);
+float blue = random(255);
 
 //Arrays to store circle info.
 float[][] myCircles = new float[20][];
@@ -10,7 +13,7 @@ color[] colours = new color[20];
 void setup() {
   
   size(800,800);
-  background(123);
+  background(red, green, blue);
   
 //Create object of Face class.
   myFace = new Face();
@@ -30,7 +33,7 @@ void setup() {
 }
 
 void draw() {
-  background(123);
+  background(red, green, blue);
   
 //paints the instance of the Face class at the mouse position every frame
   myFace.paint(mouseX, mouseY);
@@ -59,5 +62,8 @@ void draw() {
     if(keyCode == DOWN && keyPressed == true){
         myCircles[i][1] += moveCirc;
     }
+    
+    green = mouseX;
+    blue = mouseY;
   }
 }
