@@ -72,8 +72,10 @@ void draw() {
     green = mouseX;
     blue = mouseY;
 
+//Drawing my ping pong ball
     ellipse(pongX, pongY, pongSize, pongSize);
     
+//Keeps the ball bouncing off the edges and in the screen
     if(pongX > 800){
       movePongX = -movePongX;
     }
@@ -86,21 +88,17 @@ void draw() {
     if(pongY < 0){
       movePongY = -movePongY;
     }
-    
+  
+//Makes the ball move
     pongX = pongX + movePongX; 
     pongY = pongY + movePongY;
-    
+   
+//If statement which declares that if the move is clicked the ball will change direction.
     if(mousePressed && movePongX == -.5) {
-
     movePongX *= -1;
-
     }
-
     if(mousePressed && pongX == mouseX) {
-
       movePongY = movePongY * -1;
-
     }
-
   }
 }
