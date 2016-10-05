@@ -95,11 +95,9 @@ void draw() {
    
 //If statement which declares that if the move is clicked the ball will change direction.
     if(mousePressed && (mouseButton == RIGHT) && movePongX == .5) {
-      movePongX *= 1;
       movePongX *= -1;
     }
     if(mousePressed && (mouseButton == LEFT) && movePongX == -.5) {
-      movePongX *= 1;
       movePongX *= -1;
     }
   }
