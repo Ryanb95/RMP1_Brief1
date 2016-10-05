@@ -63,7 +63,9 @@ void draw() {
         myCircles[i][1] += moveCirc;
     }
     
+//changes background colour via mouse movement
     green = mouseX;
     blue = mouseY;
+
   }
 }

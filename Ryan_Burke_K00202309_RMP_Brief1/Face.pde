@@ -6,13 +6,18 @@ class Face{
   
   void paint(int xPos,int yPos){
     
+//Saves position of the current coordinate system onto the matrix
     pushMatrix();
-    
+
+//Moves the coordinate system by the specified xPos and yPos
     translate(xPos, yPos);
     
+//Sets a fill colour and draws a rectangle(main face)
     fill(255, 252, 158);
     rect(0, 0, 100, 150);
-    
+
+//Sets the fill colours and draws ellipses and a triangle
+//This makes up the eyes, nose and mouth
     fill(255);
     ellipse(25, 20, 20, 20);
     ellipse(75, 20, 20, 20);
@@ -26,7 +31,8 @@ class Face{
     
     fill(0);
     ellipse(50, 120, 35, 35);
-    
+
+//Restores the old coordinate system
     popMatrix();
   }
 }
